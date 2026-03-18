@@ -8,7 +8,6 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    console.log("Attempting logout...");
     logout();
     navigate("/login");
   };

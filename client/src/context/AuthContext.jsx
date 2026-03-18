@@ -39,7 +39,6 @@ export const AuthProvider = ({ children }) => {
         time: Date.now() // Save as timestamp
       };
       
-      console.log("Adding activity:", newActivity);
       // Keep only the latest 10 activities
       return [newActivity, ...prev].slice(0, 10);
     });
