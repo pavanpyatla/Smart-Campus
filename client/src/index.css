@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================= WHY CLEANIFY CARD ANIMATION ================= */
+
+/* Initial hidden state */
+.why-hidden {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.why-card {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-out;
+}
+
+.why-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes timelineEnter {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-timeline {
+  animation: timelineEnter 0.4s ease-out forwards;
+}
